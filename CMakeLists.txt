@@ -3,10 +3,10 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
 project(evaluation_algorithms_trends
     VERSION 1.0.0
-    DESCRIPTION "Tokamak System Monitor Piecewise estimation algorithm"
+    DESCRIPTION "Tokamak System Monitor Evaluation algorithms for trend analysis"
     LANGUAGES CXX
 )
-set(TSM_DISPLAY_NAME "TSM piecewise algorithm")
+set(TSM_DISPLAY_NAME "TSM Evaluation algorithms for trend analysis")
 
 enable_testing()
 

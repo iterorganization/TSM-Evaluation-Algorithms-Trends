@@ -1,4 +1,4 @@
-@page  piecewise Piecewise algorithm
+@page  piecewise Evaluation algorithms for trend analysis
  
 <img src="TSM-piecewise-banner.png" style="height:128px;margin-right:32px"/>
 
@@ -264,7 +264,7 @@ Where:
 1. **Linear thermal interpolation** between ambient and 4K
 2. **Quadratic current scaling** (β(I)²) during energization
 3. **Slow bias + linear trend** sufficient for 16-day drift
-4. **Piecewise operation modes** (manual mode switching)
+4. **Operation modes** (manual mode switching)
 
 ### Technical Limitations
 

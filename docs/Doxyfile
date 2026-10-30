@@ -2,7 +2,7 @@
 # Project related configuration options
 #---------------------------------------------------------------------------
 
-PROJECT_NAME           = "Piecewise Estimation Algorithm"
+PROJECT_NAME           = "Evaluation algorithms for trend analysis"
 PROJECT_NUMBER         = 1.0
 PROJECT_BRIEF          = "Data fusion estimation and reconstruction methods for tokamak systems"
 PROJECT_LOGO           = 
