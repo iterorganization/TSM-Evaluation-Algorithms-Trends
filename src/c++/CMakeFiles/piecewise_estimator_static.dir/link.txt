@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libpiecewise_estimator.a CMakeFiles/piecewise_estimator_static.dir/piecewise_estimator_lib.cpp.o CMakeFiles/piecewise_estimator_static.dir/piecewise_estimator_api.cpp.o
+/usr/bin/ranlib ../../lib/libpiecewise_estimator.a

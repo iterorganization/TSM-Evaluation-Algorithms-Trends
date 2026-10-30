@@ -1,0 +1,24 @@
+{
+  "reference_temperature_K": 293.15,
+  "energization_max_current_A": 34000.0,
+  "sensors": [
+    {
+      "id": "Z1",
+      "tag": "Z1",
+      "description": "Displacement measurement",
+      "unit": "mm",
+      "frequency_Hz": 1.0,
+      "cooldown_target_4K_0kA": 10.0,
+      "energization_target_4K_34kA": 10.0
+    },
+    {
+      "id": "W1",
+      "tag": "W1",
+      "description": "Optical strain sensor",
+      "unit": "",
+      "frequency_Hz": 2.0,
+      "cooldown_target_4K_0kA": -300.0,
+      "energization_target_4K_34kA": -330.0
+    }
+ ]
+}

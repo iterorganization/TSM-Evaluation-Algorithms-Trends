@@ -1,0 +1,36 @@
+#!/bin/bash
+set -e
+
+COV_DIR="@CMAKE_BINARY_DIR@/coverage"
+SRC_DIR="@CMAKE_SOURCE_DIR@"
+
+mkdir -p "$COV_DIR"
+cd "$SRC_DIR"
+
+echo "Capturing initial coverage..."
+lcov --capture --directory build --include "@COVERAGE_INCLUDE@" --initial -o $COV_DIR/initial.coverage.info -q
+
+echo "Capturing main coverage..."
+lcov --capture --directory build --include "@COVERAGE_INCLUDE@" -o $COV_DIR/main.coverage.info -q
+
+echo "Merging initial and main coverage files..."
+lcov -a $COV_DIR/initial.coverage.info -a $COV_DIR/main.coverage.info -o $COV_DIR/coverage_cpp.info -q
+
+if [ "@BUILD_TSM_CORE_PYTHON@" = "ON" ]; then
+    echo "Capturing Python coverage..."
+    @Python3_EXECUTABLE@ -m coverage lcov \
+        --data-file=$COV_DIR/.coverage \
+        --omit=@COVERAGE_OMIT@ \
+        -o $COV_DIR/coverage_python.info -q
+    # coverage.py LCOV output includes column numbers,
+    # while C++ lcov does not. This causes conflicts when merging.
+    # Remove the column numbers to ensure compatibility during merge.
+    sed -i -E 's/,[0-9]+,/,/g' $COV_DIR/coverage_python.info
+    echo "Merging Python and C++ coverage files..."
+    lcov -a $COV_DIR/coverage_cpp.info -a $COV_DIR/coverage_python.info -o $COV_DIR/coverage.info -q
+fi
+
+echo "Generating HTML report..."
+genhtml $COV_DIR/@COVERAGE_FINAL_FILE@ -o $COV_DIR/html --function-coverage --demangle-cpp -p $SRC_DIR/src -q
+
+echo "Coverage report generated: $COV_DIR/html/index.html"

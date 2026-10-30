@@ -1,0 +1,24 @@
+{
+  "model": {
+    "reference_temperature_K": 293.15,
+    "cooldown_target_temperature_K": 4.0,
+    "energization_max_current_A": 34000.0,
+    "clamp_inputs": true
+  },
+  "kalman": {
+    "default_sensor_params": {
+      "q_y": 1e-9,
+      "q_bias": 1e-12,
+      "q_bias_rate": 1e-18,
+      "r_meas": 200
+    }
+  },
+  "runtime": {
+    "default_dt_s": 60.0,
+    "initial_covariance_diagonal": {
+      "p00": 1e-3,
+      "p11": 1e-3,
+      "p22": 1e-3
+    }
+  }
+}

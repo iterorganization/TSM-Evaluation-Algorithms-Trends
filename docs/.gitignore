@@ -1,0 +1,9 @@
+# Doxygen generated documentation
+html/
+pdf/
+latex/
+xml/
+
+# Doxygen temporary files
+*.tmp
+doxygen_sqlite3.db
