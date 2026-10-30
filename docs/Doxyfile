@@ -27,8 +27,8 @@ EXTRACT_ANON_NSPACES   = YES
 #---------------------------------------------------------------------------
 
 INPUT                  = ../README.md \
-                         ../src/c++/piecewise_estimator_lib.hpp \
-                         ../src/c++/piecewise_estimator_api.cpp \
+                         ../src/c++/evaluation_algorithms_trends_lib.hpp \
+                         ../src/c++/evaluation_algorithms_trends_api.cpp \
 #                         ../../README.md \
 #                         ../verification/README.md 
 

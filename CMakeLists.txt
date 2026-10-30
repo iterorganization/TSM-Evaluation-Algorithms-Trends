@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
-project(piecewise_estimator
+project(evaluation_algorithms_trends
     VERSION 1.0.0
     DESCRIPTION "Tokamak System Monitor Piecewise estimation algorithm"
     LANGUAGES CXX

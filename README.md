@@ -2,7 +2,7 @@
  
 <img src="TSM-piecewise-banner.png" style="height:128px;margin-right:32px"/>
 
-# Piecewise Sensor Estimator for Structural reconstruction
+# Algorithms for Trend Analysis and Evaluation 
 
 A C++ Kalman filter implementation for real-time estimation of mechanical sensor measurements. This version has been tested and validated for MCTF operations during TF coil **cooldown** (ambient → 4K) and **energization** (0kA → 34kA) phases, using FEM-derived target values as physics priors.
 
@@ -25,13 +25,13 @@ cmake --build build -j$(nproc)
 
 This generates the library artifacts under `build/lib/`:
 
-- `libpiecewise_estimator.a` (static library)
-- `libpiecewise_estimator.so` (shared library)
+- `libevaluation_algorithms_trends.a` (static library)
+- `libevaluation_algorithms_trends.so` (shared library)
 
 Both libraries bundle:
 
-- `piecewise_estimator_lib.cpp`: core algorithm (SensorEstimator, dynamics, projections, loaders)
-- `piecewise_estimator_api.cpp`: high-level orchestration API (piecewise_algorithm class)
+- `evaluation_algorithms_trends_lib.cpp`: core algorithm (SensorEstimator, dynamics, projections, loaders)
+- `evaluation_algorithms_trends_api.cpp`: high-level orchestration API (piecewise_algorithm class)
 
 
 ### 3. Run Tests
@@ -58,8 +58,8 @@ All public symbols are under the `rec_piecewise` namespace.
 
 The implementation is split into two compilation units:
 
-- `piecewise_estimator_api.cpp`: orchestration API only (`piecewise_algorithm` methods)
-- `piecewise_estimator_lib.cpp`: config/CSV loaders, initialization helpers, SensorEstimator implementation, dynamics, projections, history loading, and shared parsing helpers (`extract*`)
+- `evaluation_algorithms_trends_api.cpp`: orchestration API only (`piecewise_algorithm` methods)
+- `evaluation_algorithms_trends_lib.cpp`: config/CSV loaders, initialization helpers, SensorEstimator implementation, dynamics, projections, history loading, and shared parsing helpers (`extract*`)
 
 This split keeps the integration entry points isolated from the estimator internals.
 

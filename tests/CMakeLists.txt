@@ -39,7 +39,7 @@ foreach(TEST_NAME IN LISTS PIECEWISE_TEST_NAMES)
     endif()
 
     add_executable(${TEST_NAME} ${TEST_SOURCE})
-    target_link_libraries(${TEST_NAME} PRIVATE piecewise_estimator_static)
+    target_link_libraries(${TEST_NAME} PRIVATE evaluation_algorithms_trends_static)
 
     add_test(
         NAME ${TEST_NAME}

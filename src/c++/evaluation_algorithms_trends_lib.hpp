@@ -1,5 +1,5 @@
 /**
- * @file piecewise_estimator_lib.hpp
+ * @file evaluation_algorithms_trends_lib.hpp
  * @brief Piecewise linear estimation algorithm for sensor state prediction in cryogenic systems.
  *
  * Provides configuration structures, Kalman filter-based sensor estimation, and main algorithm

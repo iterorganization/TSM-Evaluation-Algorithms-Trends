@@ -4,7 +4,7 @@
 #include <unordered_map>
 #include <vector>
 
-#include "piecewise_estimator_lib.hpp"
+#include "evaluation_algorithms_trends_lib.hpp"
 
 using namespace rec_piecewise;
 

@@ -1,5 +1,5 @@
 /**
- * @file piecewise_estimator_api.cpp
+ * @file evaluation_algorithms_trends_api.cpp
  * @brief Implementation of the piecewise estimation algorithm for sensor measurement processing.
  *
  * This module provides the core implementation of the piecewise algorithm class, which manages
@@ -11,7 +11,7 @@
  * @version 1.0
  */
 
-#include "piecewise_estimator_lib.hpp"
+#include "evaluation_algorithms_trends_lib.hpp"
 
 #include <stdexcept>
 
