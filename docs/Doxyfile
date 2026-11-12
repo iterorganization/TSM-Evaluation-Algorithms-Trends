@@ -9,7 +9,7 @@ PROJECT_LOGO           =
 
 FULL_PATH_NAMES        = NO
 # Using the top-level README as the main page
-USE_MARKDOWN_FILE_AS_MAINPAGE = ../README.md
+USE_MDFILE_AS_MAINPAGE = ../README.md
 
 #---------------------------------------------------------------------------
 # Build related configuration options
@@ -28,9 +28,7 @@ EXTRACT_ANON_NSPACES   = YES
 
 INPUT                  = ../README.md \
                          ../src/c++/evaluation_algorithms_trends_lib.hpp \
-                         ../src/c++/evaluation_algorithms_trends_api.cpp \
-#                         ../../README.md \
-#                         ../verification/README.md 
+                         ../src/c++/evaluation_algorithms_trends_api.cpp 
 
 INPUT_ENCODING         = UTF-8
 
@@ -65,10 +63,10 @@ ALPHABETICAL_INDEX     = YES
 GENERATE_HTML          = YES
 HTML_OUTPUT            = html
 HTML_FILE_EXTENSION    = .html
-HTML_HEADER            = html/header.html
-HTML_FOOTER            = html/footer.html
+HTML_HEADER            = header.html
+HTML_FOOTER            = footer.html
 HTML_STYLESHEET        =
-HTML_EXTRA_STYLESHEET  = html/doxygen-iter.css
+HTML_EXTRA_STYLESHEET  = doxygen-iter.css
 HTML_COLORSTYLE_HUE    = 220
 HTML_COLORSTYLE_SAT    = 100
 HTML_COLORSTYLE_GAMMA  = 80
@@ -88,7 +86,7 @@ LATEX_MAKEINDEX_CMD    = makeindex
 COMPACT_LATEX          = NO
 PAPER_TYPE             = a4
 EXTRA_PACKAGES         = newunicodechar 
-LATEX_HEADER           = latex/header.tex
+LATEX_HEADER           = header.tex
 LATEX_FOOTER           = 
 LATEX_EXTRA_STYLESHEET = 
 LATEX_EXTRA_FILES      = doxygen_latex_preamble.tex

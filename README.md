@@ -1,4 +1,4 @@
-@page  piecewise Evaluation algorithms for trend analysis
+@mainpage Evaluation algorithms for trend analysis
  
 <img src="TSM-piecewise-banner.png" style="height:128px;margin-right:32px"/>
 
