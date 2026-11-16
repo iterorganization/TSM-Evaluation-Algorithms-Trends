@@ -37,7 +37,7 @@ jobs:
       - name: Prepare GitHub Pages directory
         run: |
           mkdir -p site/stable
-          cp -r docs/build/html/* site/stable/
+          cp -r docs/html/. site/stable/
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
